@@ -39,13 +39,44 @@ Select ename,sal from employ where sal not between 2500 and 4000;
 
 select ename,job,sal from employ where mgr is null;
 
-select ename from employ where ename  like '--A%';
+select ename from employ where ename  like '___A%';
+
+select * from employ where ename like'A%A';
+
+select comm, CASE when comm is null then'not givin' else comm end as abcd from employ;
 
 select ename from employ where ename like '%T';
 
 select ename from employ where ename like 'M_L%';
 
 select * from employ where comm is null;
+
+select* from employ where deptno between 20 and 30;
+
+select * from employ where deptno>20 or deptno<10;
+
+select * from employ where hiredate between '1990-12-18' and '1992-12-09';
+
+
+
+alias--  name-- 
+select  job from employ as temp;-- 
+select place as city from temp;-- 
+select place as city,location as locality from temp;-- 
+-- ///this thing only when multiple location need to fetch-- 
+-- select * from employ where location in('bagalkot','gadag');-- 
+-- select* from employwhere location not in('bagalkot','gadag');-- 
+-- delete from employ-- 
+-- delete from employ where age=88;-- 
+-- truncate table emply  --  this line indicate deletion of table-- 
+-- birthdate  dateTimr--
+ 
+-- --1 joining date,-- 
+-- --1 joining year-- 
+  --1 insert int employ value(1,'rama',99,'2023-03-23 12:00:00','2023-3-11', 2023) -- 
+
+
+
 
 
 
